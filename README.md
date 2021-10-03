@@ -3,8 +3,9 @@ This repository contains custom Docker files for GitLab CE. Everything is setup 
 
 ## Tools requirement
 - Git
-- OpenSSH client and SSH Keys for passwordless authentication between ansible host and servers
-- Docker engine
+- OpenSSL to generate self-signed certificate
+- Docker engine to run docker containers
+- Docker-compose to start gitlab docker container with custom settings
 
 ## Usage
 ### Step 1: Clone the repo

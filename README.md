@@ -33,4 +33,4 @@ As in openssl and docker-compose.yml file gitlab.example.com is configured as FQ
 ```sh
 cat '127.0.2.1 gitlab.example.com' | sudo tee -a /etc/hosts
 ```
-After adding this line then visit below URL to access gitlab [https://gitlab.example.com](https://gitlab.example.com)
+After adding this line then visit below URL to access gitlab [https://gitlab.example.com:8443](https://gitlab.example.com:8443)

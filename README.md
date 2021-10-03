@@ -27,3 +27,10 @@ chmod 400 volume_data/ssl
 docker-compose up -d
 ```
 This command will start gitlab in docker container and expose port 8443 (HTTPS for browser access)
+
+### Local DNS resolution
+As in openssl and docker-compose.yml file gitlab.example.com is configured as FQDN, for local dns resolution and below line to `/etc/hosts` file.
+```sh
+cat '127.0.2.1 gitlab.example.com' | sudo tee -a /etc/hosts
+```
+After adding this line then visit below URL to access gitlab [a link](https://gitlab.example.com)

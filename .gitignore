@@ -1,0 +1,6 @@
+volume_data/conf/*
+volume_data/ssl/*
+volume_data/logs/*
+volume_data/main/*
+*.pem
+

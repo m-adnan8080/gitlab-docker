@@ -14,7 +14,7 @@ git clone https://github.com/m-adnan8080/gitlab-docker.git
 cd gitlab-docker
 ```
 ### Step 2: Create a self-signed certificate
-To create a silf-signed certificate use below command. Create volume_data directory in current folder and copy generated pem file to it. Also change permission to 400 (readonly)
+To create a silf-signed certificate use below command. Create volume_data directory in current folder and copy generated pem files to it. Also change permission to 400 (readonly)
 ```sh
 openssl req -newkey rsa:4096 -x509 -sha256 -days 3650 -nodes -out server-cert.pem -keyout server-key.pem -subj "/C=PK/ST=ISB/L=ISB/O=Home-DC/OU=IT Department/CN=gitlab.example.com"
 
@@ -29,7 +29,7 @@ docker-compose up -d
 This command will start gitlab in docker container and expose port 8443 (HTTPS for browser access)
 
 ### Local DNS resolution
-As in openssl and docker-compose.yml file gitlab.example.com is configured as FQDN, for local dns resolution and below line to `/etc/hosts` file.
+As in openssl and docker-compose.yml file gitlab.example.com is configured as FQDN, for local dns resolution add below line to `/etc/hosts` file.
 ```sh
 cat '127.0.2.1 gitlab.example.com' | sudo tee -a /etc/hosts
 ```
